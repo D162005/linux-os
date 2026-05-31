@@ -2,7 +2,7 @@ import React from 'react'
 import './Window.scss'
 import { Rnd } from 'react-rnd'
 
-const Window = ({ children, Window_title, setIsWindowOpen, label, isActive, onWindowFocus }) => {
+const Window = ({ children, Window_title, setIsWindowOpen, label }) => {
   return (
     
     <Rnd
@@ -13,10 +13,10 @@ const Window = ({ children, Window_title, setIsWindowOpen, label, isActive, onWi
         height: 275,
       }}
       dragHandleClassName="window-header"
-      bounds="parent"
+
     >
-      <div className="window " style={{ zIndex: isActive ? 1000 : 100 }} >
-        <div className="window-header flex items-center justify-between px-4 py-2 " onClick={onWindowFocus}>
+      <div className="window " >
+        <div className="window-header flex items-center justify-between px-4 py-2 ">
           <span className="window-title">{Window_title}</span>
           <div className="window-controls">
               <div className="yellow-control window-control"></div>

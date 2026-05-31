@@ -27,7 +27,6 @@ const App = () => {
     projects: false,
     linkedin: false
   });
-  const [activeWindow, setActiveWindow] = useState(null);
 
   // External links mapping
   const externalLinks = {
@@ -55,11 +54,11 @@ const App = () => {
         <img src={selectedWallpaper} alt="Wallpaper" className='fixed top-0 left-0 w-full h-full object-cover -z-10' />
         <Nav></Nav>
         <Dock selectedTheme={selectedTheme} selectedWallpaper={selectedWallpaper} setIsWindowOpen={handleWindowOpen} />
-        {isWindowOpen.projects && <Projects setIsWindowOpen={setIsWindowOpen} isActive={activeWindow === 'projects'} onWindowFocus={() => setActiveWindow('projects')} />}
-        {isWindowOpen.text_editor && <TextEditor setIsWindowOpen={setIsWindowOpen} isActive={activeWindow === 'text_editor'} onWindowFocus={() => setActiveWindow('text_editor')} />}
-        {isWindowOpen.resume && <Resume setIsWindowOpen={setIsWindowOpen} isActive={activeWindow === 'resume'} onWindowFocus={() => setActiveWindow('resume')} />}
-        {isWindowOpen.terminal && <TerminalCmd setIsWindowOpen={setIsWindowOpen} isActive={activeWindow === 'terminal'} onWindowFocus={() => setActiveWindow('terminal')} />}
-        {isWindowOpen.settings && <Setting  setSelectedTheme={setSelectedTheme} setSelectedWallpaper={setSelectedWallpaper} setIsWindowOpen={setIsWindowOpen} isActive={activeWindow === 'settings'} onWindowFocus={() => setActiveWindow('settings')} />}
+        {isWindowOpen.projects && <Projects setIsWindowOpen={setIsWindowOpen} />}
+        {isWindowOpen.text_editor && <TextEditor setIsWindowOpen={setIsWindowOpen} />}
+        {isWindowOpen.resume && <Resume setIsWindowOpen={setIsWindowOpen} />}
+        {isWindowOpen.terminal && <TerminalCmd setIsWindowOpen={setIsWindowOpen} />}
+        {isWindowOpen.settings && <Setting  setSelectedTheme={setSelectedTheme} setSelectedWallpaper={setSelectedWallpaper} setIsWindowOpen={setIsWindowOpen} />}
       </main>
     </div>
   )

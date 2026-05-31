@@ -2,10 +2,10 @@ import React from 'react'
 import Window from './../Window.jsx'
 import './Setting.scss'
 
-const Setting = ({ setSelectedTheme, setSelectedWallpaper, setIsWindowOpen, isActive, onWindowFocus }) => {
+const Setting = ({ setSelectedTheme, setSelectedWallpaper, setIsWindowOpen }) => {
 
   return (
-    <Window Window_title={`Setting`}  className="setting-window " setIsWindowOpen={setIsWindowOpen} label="settings" isActive={isActive} onWindowFocus={onWindowFocus}>
+    <Window Window_title={`Setting`}  className="setting-window " setIsWindowOpen={setIsWindowOpen} label="settings">
         <div className="setting">
             <div className="style-pannel">
                 <h3>Style</h3>

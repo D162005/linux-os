@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import Window from './../Window.jsx'
 import './TerminalCmd.scss'
 
-const TerminalCmd = ({setIsWindowOpen, isActive, onWindowFocus}) => {
+const TerminalCmd = ({setIsWindowOpen}) => {
   const [input, setInput] = useState('')
   const [history, setHistory] = useState([
     '╔════════════════════════════════════════════════════════╗',
@@ -179,7 +179,7 @@ Open for opportunities in:
   }
 
   return (
-    <Window Window_title="Terminal >>darshanpatil:~$" className="terminal-window" setIsWindowOpen={setIsWindowOpen} label="terminal" isActive={isActive} onWindowFocus={onWindowFocus}>
+    <Window Window_title="Terminal >>darshanpatil:~$" className="terminal-window" setIsWindowOpen={setIsWindowOpen} label="terminal">
       <div className="terminal-content">
         <div className="terminal-output" ref={outputRef}>
           {history.map((line, index) => (
