@@ -2,6 +2,8 @@
 
 A modern, interactive desktop environment simulator built with React and Vite. Mimics a Linux desktop UI with draggable windows, customizable themes, and a dock-based application launcher.
 
+Live-Link: https://linux-os-iota.vercel.app/ 
+
 ## ✨ Features
 
 - **Draggable Windows** - Move windows around the screen freely with smooth drag-and-drop functionality
@@ -66,7 +68,7 @@ npm install
 npm run dev
 ```
 
-The application will be available at `http://localhost:5173`
+The application will be available at `https://linux-os-iota.vercel.app/`
 
 ## 📦 Available Scripts
 
