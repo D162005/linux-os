@@ -8,7 +8,7 @@ import TextEditor from './componant/windows/TextEditor'
 import Resume from './componant/windows/Resume'
 import TerminalCmd from './componant/windows/TerminalCmd'
 import Setting from './componant/windows/Setting'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import {wallpapers} from './Data/theme.js'
 
 
@@ -26,46 +26,34 @@ const App = () => {
     mail: false,
     projects: false,
     linkedin: false
-});
+  });
 
-  // Handle calendar link
-  useEffect(() => {
-    if (isWindowOpen.calendar) {
-      window.open('https://calendar.google.com/calendar/u/0/r', '_blank');
-      setIsWindowOpen(prev => ({ ...prev, calendar: false }));
-    }
-  }, [isWindowOpen.calendar]);
+  // External links mapping
+  const externalLinks = {
+    calendar: 'https://calendar.google.com/calendar/u/0/r',
+    mail: 'mailto:darshanmpatil16012005@gmail.com',
+    link: 'https://github.com/D162005',
+    linkedin: 'https://www.linkedin.com/in/darshan-patil-92a7012b1/'
+  };
 
-  // Handle mail link
-  useEffect(() => {
-    if (isWindowOpen.mail) {
-      window.open('mailto:darshanmpatil16012005@gmail.com', '_blank');
-      setIsWindowOpen(prev => ({ ...prev, mail: false }));
+  // Handle window open with external link support
+  const handleWindowOpen = (windowKey) => {
+    // Check if it's an external link
+    if (externalLinks[windowKey]) {
+      window.open(externalLinks[windowKey], '_blank');
+      return;
     }
-  }, [isWindowOpen.mail]);
-
-  // Handle GitHub link
-  useEffect(() => {
-    if (isWindowOpen.link) {
-      window.open('https://github.com/D162005', '_blank');
-      setIsWindowOpen(prev => ({ ...prev, link: false }));
-    }
-  }, [isWindowOpen.link]);
-
-  // Handle LinkedIn link
-  useEffect(() => {
-    if (isWindowOpen.linkedin) {
-      window.open('https://www.linkedin.com/in/darshan-patil-92a7012b1/', '_blank');
-      setIsWindowOpen(prev => ({ ...prev, linkedin: false }));
-    }
-  }, [isWindowOpen.linkedin]);
+    
+    // For regular windows, open them
+    setIsWindowOpen(prev => ({ ...prev, [windowKey]: true }));
+  };
 
   return (
     <div>
       <main >
         <img src={selectedWallpaper} alt="Wallpaper" className='fixed top-0 left-0 w-full h-full object-cover -z-10' />
         <Nav></Nav>
-        <Dock selectedTheme={selectedTheme} selectedWallpaper={selectedWallpaper} setIsWindowOpen={setIsWindowOpen} />
+        <Dock selectedTheme={selectedTheme} selectedWallpaper={selectedWallpaper} setIsWindowOpen={handleWindowOpen} />
         {isWindowOpen.projects && <Projects setIsWindowOpen={setIsWindowOpen} />}
         {isWindowOpen.text_editor && <TextEditor setIsWindowOpen={setIsWindowOpen} />}
         {isWindowOpen.resume && <Resume setIsWindowOpen={setIsWindowOpen} />}

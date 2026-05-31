@@ -38,7 +38,7 @@ const Dock = ({ selectedTheme, setIsWindowOpen }) => {
       {/* <h1 className='h-10'>Dock</h1> */}
         <div className='h-screen w-12 bg-black/70 absolute left-0 dock-bar' onMouseMove={(e) => setMousePosition({ x: e.clientX, y: e.clientY })}>
           {icons.map(icon => (
-            <div key={icon.id} onMouseEnter={HandleMouseEnter(icon.label)} onMouseLeave={HandleMouseLeave} onClick={() => setIsWindowOpen(window => ({ ...window, [icon.id]: true }))} className='h-12 w-12 flex items-center justify-center cursor-pointer hover:bg-white/15'>
+            <div key={icon.id} onMouseEnter={HandleMouseEnter(icon.label)} onMouseLeave={HandleMouseLeave} onClick={() => setIsWindowOpen(icon.id)} className='h-12 w-12 flex items-center justify-center cursor-pointer hover:bg-white/15'>
               <img src={icon.src} alt={icon.label}  />
             </div>
           ))}
