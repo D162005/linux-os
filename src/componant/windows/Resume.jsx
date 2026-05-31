@@ -3,9 +3,9 @@ import './Resume.scss'
 import Window from './../Window.jsx'
 import resumePDF from './../../Data/Darshan Patil Resume.pdf?url'
 
-const Resume = ({setIsWindowOpen}) => {
+const Resume = ({setIsWindowOpen, isActive, onWindowFocus}) => {
   return (
-    <Window Window_title={`Resume 'Darshan Patil'`}  className="resume-window " setIsWindowOpen={setIsWindowOpen} label="resume">
+    <Window Window_title={`Resume 'Darshan Patil'`}  className="resume-window " setIsWindowOpen={setIsWindowOpen} label="resume" isActive={isActive} onWindowFocus={onWindowFocus}>
         <div className="resume-content">
             <iframe src={resumePDF} title="Resume" className="resume-iframe" />
         </div>

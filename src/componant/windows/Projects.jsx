@@ -3,10 +3,10 @@ import projects from './../../Data/project_data'
 import Window from './../Window.jsx'
 import './projects.scss'
 
-const Projects = ({ setIsWindowOpen }) => {
+const Projects = ({ setIsWindowOpen, isActive, onWindowFocus }) => {
   return (
     <>
-        <Window Window_title="Projects" className="projects-window" setIsWindowOpen={setIsWindowOpen} label="projects">
+        <Window Window_title="Projects" className="projects-window" setIsWindowOpen={setIsWindowOpen} label="projects" isActive={isActive} onWindowFocus={onWindowFocus}>
             <div className='projects-container'>
                 {projects.map(project => (
                     <div key={project.id} className='project-card'>

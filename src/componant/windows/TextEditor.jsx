@@ -7,12 +7,12 @@ import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 import noteContent from './../../Data/note.txt?raw'
 
 
-const TextEditor = ({ setIsWindowOpen }) => {
+const TextEditor = ({ setIsWindowOpen, isActive, onWindowFocus }) => {
 
   const markdown = noteContent
 
   return (
-    <Window Window_title="Text Editor < Details >" className="text-editor-window " setIsWindowOpen={setIsWindowOpen} label="text_editor">
+    <Window Window_title="Text Editor < Details >" className="text-editor-window " setIsWindowOpen={setIsWindowOpen} label="text_editor" isActive={isActive} onWindowFocus={onWindowFocus}>
       <div className="text-editor-content">
         {markdown ? (
           <SyntaxHighlighter 
