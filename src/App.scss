@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100vh;
+    width: 100vw;
+}
+
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(26, 26, 26);
+    // background-image: url('/public/wallpaper1.svg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+.dock-bar{
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    
+     /* Add some spacing between the top of the dock and the icons */
+}
+
+.logo-label{
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    background-color: rgba(52, 52, 52, 0.654);
+    border: solid 1px rgba(255, 255, 255, 0.5);
+}
+

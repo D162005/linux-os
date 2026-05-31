@@ -1,0 +1,67 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ubuntuGradient" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2C001E"/>
+      <stop offset="0.34" stop-color="#772953"/>
+      <stop offset="0.68" stop-color="#C64600"/>
+      <stop offset="1" stop-color="#E95420"/>
+    </linearGradient>
+    <radialGradient id="lightBloom" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1020 400) rotate(112) scale(780 520)">
+      <stop stop-color="#FFB088" stop-opacity="0.72"/>
+      <stop offset="0.42" stop-color="#E95420" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#2C001E" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="purpleBloom" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(330 520) rotate(35) scale(640 420)">
+      <stop stop-color="#B85CA7" stop-opacity="0.58"/>
+      <stop offset="0.48" stop-color="#772953" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#2C001E" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="paperNoise" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012 0.028" numOctaves="5" seed="18"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.18"/>
+      </feComponentTransfer>
+    </filter>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <linearGradient id="jellyBody" x1="780" y1="270" x2="975" y2="575" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF0E8" stop-opacity="0.72"/>
+      <stop offset="0.52" stop-color="#FFB9A4" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#F7E8FF" stop-opacity="0.14"/>
+    </linearGradient>
+    <linearGradient id="tentacleStroke" x1="850" y1="445" x2="780" y2="780" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE8DF" stop-opacity="0.64"/>
+      <stop offset="1" stop-color="#FFD4F0" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#ubuntuGradient)"/>
+  <rect width="1600" height="900" fill="url(#lightBloom)"/>
+  <rect width="1600" height="900" fill="url(#purpleBloom)"/>
+  <rect width="1600" height="900" filter="url(#paperNoise)" opacity="0.85"/>
+  <g opacity="0.22" filter="url(#softGlow)">
+    <circle cx="1178" cy="186" r="150" fill="#FFB088"/>
+    <circle cx="260" cy="645" r="190" fill="#B65FA6"/>
+  </g>
+  <g transform="translate(70 5)">
+    <path d="M825 255C934 253 1019 337 1008 431C1003 476 973 506 925 518C877 530 796 529 747 512C698 496 668 466 665 425C657 330 716 257 825 255Z" fill="url(#jellyBody)"/>
+    <path d="M682 430C748 458 925 461 994 428C983 493 934 541 838 544C742 548 692 501 682 430Z" fill="#FFD8CF" opacity="0.18"/>
+    <path d="M700 431C753 393 929 397 980 430" stroke="#FFF2EE" stroke-opacity="0.26" stroke-width="5" stroke-linecap="round"/>
+    <path d="M723 467C785 492 900 493 960 467" stroke="#FFF2EE" stroke-opacity="0.23" stroke-width="4" stroke-linecap="round"/>
+    <g stroke="url(#tentacleStroke)" stroke-width="5" stroke-linecap="round">
+      <path d="M735 506C721 572 759 610 738 682C726 721 704 746 716 793"/>
+      <path d="M775 523C765 594 804 639 782 708C769 749 752 775 762 833"/>
+      <path d="M816 530C808 606 849 659 829 729C817 770 796 805 810 850"/>
+      <path d="M861 531C874 600 831 660 855 732C871 779 904 811 896 858"/>
+      <path d="M905 524C929 593 881 648 914 721C936 769 966 796 955 843"/>
+      <path d="M945 504C980 568 938 621 975 688C1001 735 1015 765 1004 812"/>
+    </g>
+    <g stroke="#FFEDE7" stroke-opacity="0.24" stroke-width="3" stroke-linecap="round">
+      <path d="M763 519C752 587 712 642 733 704"/>
+      <path d="M840 539C830 626 897 676 870 748"/>
+      <path d="M929 514C943 589 1002 635 982 704"/>
+    </g>
+  </g>
+  <path d="M0 760C255 662 423 801 654 721C865 648 1089 606 1600 724V900H0V760Z" fill="#2C001E" opacity="0.14"/>
+</svg>

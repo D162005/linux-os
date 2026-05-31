@@ -1,0 +1,42 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tile" x1="78" y1="64" x2="434" y2="446" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3A303D"/>
+      <stop offset="0.45" stop-color="#241B26"/>
+      <stop offset="1" stop-color="#120E14"/>
+    </linearGradient>
+    <linearGradient id="gear" x1="148" y1="128" x2="368" y2="390" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF8F2"/>
+      <stop offset="1" stop-color="#D8CEC8"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="198" y1="176" x2="326" y2="328" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F29A78"/>
+      <stop offset="0.52" stop-color="#E95420"/>
+      <stop offset="1" stop-color="#C64600"/>
+    </linearGradient>
+    <filter id="shadow" x="35" y="37" width="442" height="454" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="14"/>
+      <feGaussianBlur stdDeviation="21"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.03 0 0 0 0 0.02 0 0 0 0 0.04 0 0 0 0.42 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="76" y="64" width="360" height="370" rx="74" fill="url(#tile)"/>
+
+    <path
+      fill="url(#gear)"
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M274.5 126C282.508 126 289 132.492 289 140.5V164.013C299.51 167.067 309.396 171.381 318.478 176.775L335.1 160.153C340.762 154.491 349.941 154.491 355.603 160.153L371.847 176.397C377.509 182.059 377.509 191.238 371.847 196.9L355.225 213.522C360.619 222.604 364.933 232.49 367.987 243H391.5C399.508 243 406 249.492 406 257.5V280.5C406 288.508 399.508 295 391.5 295H367.987C364.933 305.51 360.619 315.396 355.225 324.478L371.847 341.1C377.509 346.762 377.509 355.941 371.847 361.603L355.603 377.847C349.941 383.509 340.762 383.509 335.1 377.847L318.478 361.225C309.396 366.619 299.51 370.933 289 373.987V397.5C289 405.508 282.508 412 274.5 412H251.5C243.492 412 237 405.508 237 397.5V373.987C226.49 370.933 216.604 366.619 207.522 361.225L190.9 377.847C185.238 383.509 176.059 383.509 170.397 377.847L154.153 361.603C148.491 355.941 148.491 346.762 154.153 341.1L170.775 324.478C165.381 315.396 161.067 305.51 158.013 295H134.5C126.492 295 120 288.508 120 280.5V257.5C120 249.492 126.492 243 134.5 243H158.013C161.067 232.49 165.381 222.604 170.775 213.522L154.153 196.9C148.491 191.238 148.491 182.059 154.153 176.397L170.397 160.153C176.059 154.491 185.238 154.491 190.9 160.153L207.522 176.775C216.604 171.381 226.49 167.067 237 164.013V140.5C237 132.492 243.492 126 251.5 126H274.5ZM263 212C231.52 212 206 237.52 206 269C206 300.48 231.52 326 263 326C294.48 326 320 300.48 320 269C320 237.52 294.48 212 263 212Z"
+    />
+
+    <circle cx="263" cy="269" r="36" fill="url(#accent)"/>
+    <circle cx="263" cy="269" r="17" fill="#FFF8F2"/>
+  </g>
+</svg>

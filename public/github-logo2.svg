@@ -1,0 +1,31 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tile" x1="78" y1="64" x2="434" y2="446" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3A303D"/>
+      <stop offset="0.45" stop-color="#241B26"/>
+      <stop offset="1" stop-color="#120E14"/>
+    </linearGradient>
+    <radialGradient id="accentGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(338 142) rotate(119) scale(245 210)">
+      <stop stop-color="#0A66C2" stop-opacity="0.62"/>
+      <stop offset="0.58" stop-color="#772953" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#120E14" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="35" y="37" width="442" height="454" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="14"/>
+      <feGaussianBlur stdDeviation="21"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.03 0 0 0 0 0.02 0 0 0 0 0.04 0 0 0 0.42 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="76" y="64" width="360" height="370" rx="74" fill="url(#tile)"/>
+    <rect x="76" y="64" width="360" height="370" rx="74" fill="url(#accentGlow)"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M256 122C180.889 122 120 182.889 120 258C120 318.161 158.937 369.159 212.988 387.191C219.788 388.452 222.281 384.237 222.281 380.637C222.281 377.404 222.163 368.844 222.095 357.49C184.258 365.713 176.279 341.956 176.279 341.956C170.091 326.228 161.17 322.04 161.17 322.04C148.82 313.598 162.104 313.771 162.104 313.771C175.76 314.732 182.945 327.789 182.945 327.789C195.081 348.581 214.778 342.574 222.531 339.094C223.765 330.302 227.282 324.306 231.168 320.912C200.967 317.475 169.214 305.811 169.214 253.665C169.214 238.807 174.518 226.65 183.223 217.131C181.823 213.691 177.152 199.844 184.555 181.096C184.555 181.096 195.977 177.438 221.966 195.05C232.812 192.034 244.445 190.525 256 190.471C267.555 190.525 279.188 192.034 290.05 195.05C316.023 177.438 327.423 181.096 327.423 181.096C334.848 199.844 330.177 213.691 328.777 217.131C337.504 226.65 342.77 238.807 342.77 253.665C342.77 305.941 310.967 317.438 280.67 320.802C285.551 325 289.902 333.295 289.902 345.988C289.902 364.18 289.735 378.854 289.735 380.637C289.735 384.269 292.185 388.52 299.085 387.174C353.091 369.111 392 318.139 392 258C392 182.889 331.111 122 256 122Z" fill="#F7F2F7"/>
+    <path d="M186 328C198 348 215 343 223 339" stroke="#0A66C2" stroke-width="9" stroke-linecap="round" opacity="0.78"/>
+  </g>
+</svg>

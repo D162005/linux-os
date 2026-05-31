@@ -1,0 +1,24 @@
+.nav-bar{
+    width: 100%;
+    background-color: rgba(52, 52, 52, 0.877);
+    // border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding: 0.5rem 1rem;
+    padding-left: 4rem;
+}
+
+.nav-network{
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.nav-network span{
+    font-size: 0.80rem;
+    white-space: nowrap;
+    // background-color: rgba(52, 52, 52, 0.654);
+    // border: solid 1px rgba(255, 255, 255, 0.5);
+    // padding: 0.2rem 0.5rem;
+}

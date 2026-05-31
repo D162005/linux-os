@@ -1,0 +1,82 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#07111F"/>
+      <stop offset="0.42" stop-color="#10253A"/>
+      <stop offset="0.76" stop-color="#162C34"/>
+      <stop offset="1" stop-color="#08100F"/>
+    </linearGradient>
+    <radialGradient id="moonGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1165 170) rotate(90) scale(250)">
+      <stop stop-color="#DDEBFF" stop-opacity="0.62"/>
+      <stop offset="0.42" stop-color="#8DB9E8" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#07111F" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="horizonGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(760 520) rotate(90) scale(520 900)">
+      <stop stop-color="#4D7894" stop-opacity="0.28"/>
+      <stop offset="0.54" stop-color="#233F4C" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#07111F" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="snow" x1="816" y1="368" x2="902" y2="522" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7FBFF" stop-opacity="0.86"/>
+      <stop offset="1" stop-color="#A6C3D9" stop-opacity="0.26"/>
+    </linearGradient>
+    <linearGradient id="lake" x1="800" y1="614" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#173747" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#08100F"/>
+    </linearGradient>
+    <filter id="softBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="grain" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.016 0.04" numOctaves="4" seed="27"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.12"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <rect width="1600" height="900" fill="url(#moonGlow)"/>
+  <rect width="1600" height="900" fill="url(#horizonGlow)"/>
+  <g opacity="0.86">
+    <circle cx="1165" cy="170" r="54" fill="#EAF4FF"/>
+    <circle cx="1146" cy="154" r="53" fill="#D9ECFF" opacity="0.16"/>
+  </g>
+  <g fill="#DDEBFF" opacity="0.82">
+    <circle cx="156" cy="122" r="1.8"/>
+    <circle cx="260" cy="238" r="1.2"/>
+    <circle cx="387" cy="91" r="1.5"/>
+    <circle cx="520" cy="192" r="1.2"/>
+    <circle cx="661" cy="86" r="1.8"/>
+    <circle cx="734" cy="274" r="1.2"/>
+    <circle cx="878" cy="134" r="1.4"/>
+    <circle cx="1004" cy="236" r="1.1"/>
+    <circle cx="1290" cy="96" r="1.4"/>
+    <circle cx="1432" cy="225" r="1.6"/>
+    <circle cx="1510" cy="132" r="1.1"/>
+  </g>
+  <g opacity="0.28" filter="url(#softBlur)">
+    <ellipse cx="806" cy="592" rx="690" ry="62" fill="#7DB2D4"/>
+  </g>
+  <path d="M0 528L126 456L238 502L352 382L486 470L616 315L748 450L870 274L1015 456L1134 347L1254 474L1378 400L1600 520V900H0V528Z" fill="#1B3340"/>
+  <path d="M617 315L678 504L748 450L711 421L692 356Z" fill="#284A5A"/>
+  <path d="M870 274L1015 456L933 420L899 350Z" fill="#294E60"/>
+  <path d="M352 382L486 470L418 450L386 413Z" fill="#2C5363"/>
+  <path d="M1134 347L1254 474L1186 448L1158 395Z" fill="#2A4C5B"/>
+  <path d="M617 315L650 416L690 370L748 450L690 414L661 455L635 383Z" fill="url(#snow)"/>
+  <path d="M870 274L906 383L953 374L1015 456L942 417L908 430L890 345Z" fill="url(#snow)"/>
+  <path d="M352 382L386 430L418 409L486 470L414 445L388 459Z" fill="#DDEEFF" opacity="0.42"/>
+  <path d="M1134 347L1168 415L1192 399L1254 474L1180 442L1154 457Z" fill="#DDEEFF" opacity="0.36"/>
+  <path d="M0 594L140 546L250 577L398 514L548 568L705 498L844 566L981 496L1118 570L1280 530L1438 588L1600 544V900H0V594Z" fill="#10252E"/>
+  <path d="M0 660L160 618L340 650L516 590L704 636L874 574L1042 636L1240 592L1424 646L1600 610V900H0V660Z" fill="#0B1B20"/>
+  <path d="M0 620H1600V900H0V620Z" fill="url(#lake)" opacity="0.94"/>
+  <path d="M0 646C220 628 404 664 588 644C790 622 930 624 1118 650C1300 676 1438 640 1600 652V900H0V646Z" fill="#0B1D24" opacity="0.5"/>
+  <g stroke="#BBD8EA" stroke-opacity="0.16" stroke-width="2">
+    <path d="M438 675C568 664 690 672 812 664"/>
+    <path d="M744 724C884 709 1028 715 1168 704"/>
+    <path d="M214 760C382 744 510 754 648 742"/>
+    <path d="M1010 792C1196 772 1354 786 1512 770"/>
+  </g>
+  <path d="M0 792C180 752 342 778 514 746C684 714 874 736 1038 704C1234 666 1406 698 1600 660V900H0V792Z" fill="#06100E" opacity="0.82"/>
+  <rect width="1600" height="900" filter="url(#grain)" opacity="0.72"/>
+</svg>
