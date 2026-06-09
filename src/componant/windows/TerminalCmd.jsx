@@ -24,147 +24,236 @@ const TerminalCmd = ({setIsWindowOpen}) => {
     let response = ''
 
     if (cmd === 'help') {
-      response = `
+  response = `
 ╔════════════════════════════════════════════════════════╗
-║              AVAILABLE COMMANDS                        ║
+║              AVAILABLE COMMANDS                       ║
 ╚════════════════════════════════════════════════════════╝
 
   whoami              Show current user
-  about              About me & professional summary
-  skills             Frontend & backend tech stack
-  experience         Professional experience & roles
-  projects           Portfolio projects showcase
-  contact            Get in touch information
-  pwd                Print working directory
-  date               Show current date & time
-  echo [text]        Echo the provided text
-  clear              Clear the terminal
-  ls                 List portfolio sections`
-    } else if (cmd === 'whoami') {
-      response = 'darshanpatil@portfolio:~$ Senior Full-Stack Engineer'
-    } else if (cmd === 'about') {
-      response = `
+  about               About me & professional summary
+  skills              Frontend & backend tech stack
+  education           Academic background
+  achievements        Competitions & awards
+  projects            Portfolio projects showcase
+  contact             Get in touch information
+  pwd                 Print working directory
+  date                Show current date & time
+  echo [text]         Echo the provided text
+  clear               Clear the terminal
+  ls                  List portfolio sections`
+}
+
+else if (cmd === 'whoami') {
+  response = 'darshan@portfolio:~$ Full Stack Developer | MERN Stack Developer'
+}
+
+else if (cmd === 'about') {
+  response = `
 ╔════════════════════════════════════════════════════════╗
-║                  ABOUT ME                             ║
+║                    ABOUT ME                           ║
 ╚════════════════════════════════════════════════════════╝
 
 Name: Darshan Patil
-Role: Senior Full-Stack Engineer
-Experience: 4+ Years in Web Development
+
+Role:
+  • Software Engineer
+  • Full Stack Developer
+  • MERN Stack Developer
+
+Summary:
+Computer Science Engineering student passionate about
+building scalable web applications, interactive 3D
+experiences, and real-time systems.
 
 Specialization:
-  • Full-Stack Web Application Development
-  • React.js & Next.js Frontend Architecture
-  • Node.js & PostgreSQL Backend Systems
-  • Cloud Deployment & DevOps (AWS/Docker)
+  • MERN Stack Development
+  • REST API Development
+  • Real-Time Applications (Socket.IO)
+  • 3D Web Development (Three.js)
+  • Responsive UI/UX Development
 
-Philosophy:
-"Building scalable, performant, and user-centric solutions
-that solve real-world problems with clean code practices."`
-    } else if (cmd === 'skills') {
-      response = `
+Current Focus:
+Building production-ready applications and
+contributing to open-source projects.
+
+Motto:
+"Transforming ideas into impactful digital experiences."`
+}
+
+else if (cmd === 'skills') {
+  response = `
 ╔════════════════════════════════════════════════════════╗
-║                  TECH STACK                           ║
+║                    TECH STACK                         ║
 ╚════════════════════════════════════════════════════════╝
+
+LANGUAGES:
+  • JavaScript (ES6+)
+  • C
+  • C++
+  • Python
 
 FRONTEND:
-  • React.js ............................ 100%
-  • Next.js ............................. 95%
-  • TailwindCSS ......................... 90%
-  • Three.js ............................ 70%
+  • React.js
+  • Vite
+  • Tailwind CSS
+  • Bootstrap
+  • SCSS
+  • Three.js
+  • React Three Fiber
+  • GSAP
 
 BACKEND:
-  • Node.js ............................. 90%
-  • PostgreSQL .......................... 85%
-  • Redis ............................... 75%
-  • Docker .............................. 80%
+  • Node.js
+  • Express.js
+  • REST APIs
+  • JWT Authentication
+  • Socket.IO
+  • Flask
 
-TOOLS & PLATFORMS:
-  • AWS (EC2, S3, Lambda)
+DATABASES:
+  • MongoDB
+  • MySQL
+  • Firebase Firestore
+
+TOOLS:
   • Git & GitHub
-  • Figma (UI/UX)
-  • Linux/Unix Systems`
-    } else if (cmd === 'experience') {
-      response = `
+  • Postman
+  • VS Code
+  • Firebase
+  • Vercel
+  • Render
+  • ESLint`
+}
+
+else if (cmd === 'education') {
+  response = `
 ╔════════════════════════════════════════════════════════╗
-║              PROFESSIONAL EXPERIENCE                  ║
+║                  EDUCATION                            ║
 ╚════════════════════════════════════════════════════════╝
 
-CURRENT ROLE (2023 - Present)
+Bachelor of Engineering
+Computer Science & Engineering
+
+University:
+  Mumbai University
+
+Duration:
+  2022 - 2026
+
+Status:
+  Final Year Student
+
+Focus Areas:
+  • Full Stack Development
+  • Data Structures & Algorithms
+  • Database Management Systems
+  • Software Engineering
+  • Computer Networks`
+}
+
+else if (cmd === 'achievements') {
+  response = `
+╔════════════════════════════════════════════════════════╗
+║                 ACHIEVEMENTS                          ║
+╚════════════════════════════════════════════════════════╝
+
+🏆 1st Place
 ─────────────────────────────────
-TechFlow Systems - Senior Full-Stack Engineer
-  
-  ✓ Led monolith-to-microservices migration
-  ✓ Optimized API performance (40% latency reduction)
-  ✓ Mentored 3 junior developers
-  ✓ Architected real-time notification system
-  ✓ Managed 5+ high-impact projects
+Code-O-Logy
+Pseudo-Code Competition (CSI)
 
-PREVIOUS ROLE (2021 - 2023)
+🏆 3rd Place
 ─────────────────────────────────
-WebDynamos Inc. - Full-Stack Developer
+Code-O-Logy
+Bug Hunting Competition (CSI)
 
-  ✓ Built responsive web applications
-  ✓ Implemented RESTful APIs
-  ✓ Optimized database queries
-  ✓ Collaborated with cross-functional teams`
-    } else if (cmd === 'projects') {
-      response = `
+🚀 Additional Highlights
+─────────────────────────────────
+• Built multiple production-ready MERN applications
+• Developed interactive 3D educational platforms
+• Active Open Source Contributor
+• Passionate about solving real-world problems`
+}
+
+else if (cmd === 'projects') {
+  response = `
 ╔════════════════════════════════════════════════════════╗
-║              FEATURED PROJECTS                        ║
+║                FEATURED PROJECTS                      ║
 ╚════════════════════════════════════════════════════════╝
 
-PROJECT 1: E-Commerce Platform
-├─ Tech: React, Node.js, PostgreSQL, Stripe
-├─ Features: Real-time inventory, payment processing
-└─ Impact: 100K+ monthly users
+PROJECT 1: College Katta
+├─ Stack: MERN, Socket.IO, JWT
+├─ Features:
+│  • Study Material Management
+│  • Admin Approval Workflow
+│  • Role Based Access
+│  • Real-Time Chat
+└─ Status: Production Deployed
 
-PROJECT 2: Analytics Dashboard
-├─ Tech: Next.js, D3.js, Firebase
-├─ Features: Real-time data visualization
-└─ Impact: 2M+ data points processed daily
+PROJECT 2: NetViz3D
+├─ Stack: Three.js, R3F, GSAP
+├─ Features:
+│  • Network Topology Visualization
+│  • OSI Layer Simulation
+│  • Packet Flow Animation
+│  • AI Command Interface
+└─ Category: 3D Educational Platform
 
-PROJECT 3: Social Networking App
-├─ Tech: React Native, Node.js, WebSocket
-├─ Features: Real-time messaging, notifications
-└─ Impact: 50K+ active users
+PROJECT 3: Linux Portfolio
+├─ Stack: React, Tailwind, SCSS
+├─ Features:
+│  • Linux Inspired Interface
+│  • Terminal Commands
+│  • Desktop Environment UI
+│  • Responsive Design
+└─ Category: Personal Portfolio
 
-PROJECT 4: AI Content Generator
-├─ Tech: Next.js, OpenAI API, TailwindCSS
-├─ Features: Intelligent content creation
-└─ Impact: 10K+ documents generated`
-    } else if (cmd === 'contact') {
-      response = `
+PROJECT 4: JavaScript Mini Projects
+├─ Stack: HTML, CSS, JavaScript
+├─ Features:
+│  • DOM Manipulation
+│  • Canvas API
+│  • Games & Animations
+│  • Interactive Components
+└─ Category: Frontend Experiments`
+}
+
+else if (cmd === 'contact') {
+  response = `
 ╔════════════════════════════════════════════════════════╗
-║              CONTACT INFORMATION                      ║
+║               CONTACT INFORMATION                     ║
 ╚════════════════════════════════════════════════════════╝
 
-📧 Email: darshan.patil@techmail.com
-💼 LinkedIn: linkedin.com/in/darshanpatil
-🐙 GitHub: github.com/darshanpatil
-🌐 Portfolio: darshanpatil.dev
-📱 Phone: +1 (555) 123-4567
+📧 Email:
+darshanmpatil16012005@gmail.com
 
-Open for opportunities in:
-  • Full-Stack Development
-  • Technical Mentorship
+💼 LinkedIn:
+linkedin.com/in/darshan-patil
+
+🐙 GitHub:
+github.com/DarshanPatil
+
+📍 Location:
+India
+
+🎓 Status:
+Computer Science Engineering Student
+
+Open To:
+  • Full Stack Developer Roles
+  • MERN Stack Opportunities
+  • Software Engineering Internships
   • Open Source Contributions
   • Freelance Projects`
-    } else if (cmd === 'pwd') {
-      response = '/home/darshanpatil/portfolio'
-    } else if (cmd === 'date') {
-      response = new Date().toString()
-    } else if (cmd === 'clear') {
-      setHistory([])
-      setInput('')
-      return
-    } else if (cmd === 'ls') {
-      response = 'about/  skills/  experience/  projects/  contact/  resume.pdf'
-    } else if (cmd.startsWith('echo ')) {
-      response = cmd.substring(5)
-    } else if (cmd === '') {
-      return
-    } else {
+}
+
+else if (cmd === 'pwd') {
+  response = '/home/darshan/projects/portfolio'
+}
+
+else if (cmd === 'ls') {
+  response ='about/  skills/  education/  achievements/  projects/  contact/  resume.pdf'
+} else {
       response = `bash: ${cmd}: command not found`
     }
 

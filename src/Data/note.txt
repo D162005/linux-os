@@ -1,105 +1,197 @@
-/**
- * @file: profile.config.ts
- * @author: Engineering Portfolio
- * @summary: A high-performance full-stack engineer.
- */
 
-// --------------------------------------------------
-// 1. CORE DEPENDENCIES & SKILLS
-// --------------------------------------------------
+ @file: darshan.profile.ts
+ @author: Darshan Patil
+ @summary: Full Stack Developer passionate about building scalable web applications, 3D experiences, and developer-focused solutions.
+
+
+--------------------------------------------------
+ 1. CORE TECH STACK
+--------------------------------------------------
 
 const TECH_STACK = {
   frontend: [
-    "React.js",    // 100%
-    "Next.js",     // 95%
-    "TailwindCSS", // 90%
-    "Three.js",    // 70%
+    "React.js",          // 95%
+    "Vite",              // 90%
+    "Tailwind CSS",      // 90%
+    "Bootstrap",         // 85%
+    "Three.js",          // 80%
+    "React Three Fiber", // 80%
+    "GSAP",              // 75%
   ],
+
   backend: [
-    "Node.js",     // 90%
-    "PostgreSQL",  // 85%
-    "Redis",       // 75%
-    "Docker",      // 80%
+    "Node.js",           // 90%
+    "Express.js",        // 90%
+    "Socket.IO",         // 85%
+    "JWT Authentication",// 85%
+    "REST APIs",         // 90%
+    "Flask",             // 70%
   ],
-  tools: ["AWS", "Git", "Figma", "Linux"]
+
+  databases: [
+    "MongoDB",
+    "MySQL",
+    "Firebase Firestore"
+  ],
+
+  languages: [
+    "JavaScript",
+    "C",
+    "C++",
+    "Python"
+  ],
+
+  tools: [
+    "Git",
+    "GitHub",
+    "Postman",
+    "VS Code",
+    "Firebase",
+    "Vercel",
+    "Render",
+    "ESLint"
+  ]
 };
 
-// --------------------------------------------------
-// 2. EXPERIENCE LOG (Reverse Chronological)
-// --------------------------------------------------
+--------------------------------------------------
+ 2. PROJECT HISTORY
+ --------------------------------------------------
 
-class ProfessionalHistory {
+class EngineeringJourney {
+
   
-  /** * CURRENT ROLE
-   * @period 2023 - Present 
-   */
-  public async TechFlow_Systems(): Promise<Impact> {
-    const role = "Senior Full-Stack Engineer";
-    
-    // Key Achievements
-    const optimized = await api.optimize({ strategy: "Redis Caching" });
-    const latencyReduction = "40%";
-    
-    const leadership = this.mentor(["Jr. Dev 1", "Jr. Dev 2", "Jr. Dev 3"]);
-    const architecture = "Monolith -> Microservices Migration";
-    
-    return { role, optimized, architecture, leadership };
+  @period 2025 - Present
+  
+  public async CollegeKatta(): Promise<ProjectImpact> {
+
+    const project = "Study Material Management Platform";
+
+    const features = [
+      "Role-Based Access Control",
+      "JWT Authentication",
+      "Admin Approval Workflow",
+      "Real-Time Chat System",
+      "File Upload & Management"
+    ];
+
+    const tech = [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Socket.IO"
+    ];
+
+    return { project, features, tech };
   }
 
-  /** * PREVIOUS ROLE
-   * @period 2021 - 2023
-   */
-  public PixelPerfect_Studios(): void {
-    this.role = "Frontend Developer";
-    this.focus = "High-Fidelity Animations";
-    
-    // Implemented GSAP scroll-triggers for 15+ clients
-    // Improved Lighthouse Performance Scores: 65 -> 98
+  
+  @period 2025
+  
+  public NetViz3D(): void {
+
+    this.project = "Network Visualization 3D";
+
+    this.focus = [
+      "OSI Layer Simulation",
+      "Network Topologies",
+      "Packet Flow Visualization",
+      "3D Learning Experience"
+    ];
+
+    this.stack = [
+      "Three.js",
+      "React Three Fiber",
+      "Zustand",
+      "GSAP",
+      "Framer Motion"
+    ];
+  }
+
+  
+  @period 2024
+  
+  public LinuxPortfolio(): void {
+
+    this.project = "Linux OS Inspired Portfolio";
+
+    this.features = [
+      "Desktop Environment UI",
+      "Terminal Commands",
+      "Window Management",
+      "Responsive Design"
+    ];
+
+    this.tech = [
+      "React.js",
+      "Tailwind CSS",
+      "SCSS",
+      "JavaScript"
+    ];
   }
 }
 
-// --------------------------------------------------
-// 3. COMPETITIVE ACHIEVEMENTS
-// --------------------------------------------------
+--------------------------------------------------
+3. ACHIEVEMENTS
+--------------------------------------------------
 
-interface HackathonWin {
-  rank: number;
+interface Achievement {
+  rank: string;
   event: string;
-  project: string;
+  category: string;
 }
 
-const trophyCabinet: HackathonWin[] = [
+const achievements: Achievement[] = [
   {
-    rank: 1,
-    event: "Global AI Hackathon 2024",
-    project: "EcoVision (Computer Vision Waste Segregation)",
-    // Prize: $5,000
+    rank: "1st Place",
+    event: "Code-O-Logy",
+    category: "Pseudo Code Competition (CSI)"
   },
   {
-    rank: 500, // Top 500 Global
-    event: "Google Code Jam 2023",
-    project: "Algorithm Optimization (Dynamic Programming)",
+    rank: "3rd Place",
+    event: "Code-O-Logy",
+    category: "Bug Hunting Competition (CSI)"
   }
 ];
 
-// --------------------------------------------------
-// 4. ACADEMIC BACKGROUND
-// --------------------------------------------------
+--------------------------------------------------
+4. EDUCATION
+--------------------------------------------------
 
 const education = new Map<string, string>([
-  ["Stanford University", "MS Computer Science (3.9 GPA)"],
-  ["MIT World Peace Univ", "B.Tech Information Tech (8.8 CGPA)"]
+  [
+    "Mumbai University",
+    "Bachelor of Engineering in Computer Science & Engineering (2022 - 2026)"
+  ]
 ]);
 
-export default new ProfessionalHistory();
+--------------------------------------------------
+5. DEVELOPER PROFILE
+--------------------------------------------------
 
+const developer = {
+  name: "Darshan Patil",
+  role: [
+    "Software Engineer",
+    "Full Stack Developer",
+    "MERN Stack Developer"
+  ],
 
-```bash
-# TERMINAL OUTPUT
-# ---------------------------------------
-$ user --status
-> Status: Open to Opportunities
-> Location: Global / Remote
-> Loading Assets... [||||||||||] 100%
-> Ready.
-```
+  interests: [
+    "Web Development",
+    "3D Web Experiences",
+    "Open Source",
+    "System Design",
+    "Developer Tools"
+  ],
+
+  currentlyBuilding: [
+    "College Katta",
+    "3D Learning Platforms",
+    "MERN Applications"
+  ],
+
+  motto:
+    "Building practical software that solves real problems while creating engaging user experiences."
+};
+
